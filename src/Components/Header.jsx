@@ -16,16 +16,22 @@ export default function Header() {
         }
     ]
     return (
-        <header>
-            <ul>
-                {navLinks.map((link, index) => (
-                
-                <li key={index}>
-                    <NavLink to={link.path}>{link.title}</NavLink>
-                </li>
-                  
-                ))}
-            </ul>
+        <header className="container">
+            <div>
+                Logo
+            </div>
+            <div>
+
+                <ul className="flex jc-space-between">
+                    {navLinks.map((link, index) => (
+
+                        <li key={index}>
+                            <NavLink to={link.path}>{link.title}</NavLink>
+                        </li>
+
+                    ))}
+                </ul>
+            </div>
         </header>
     )
 }
